@@ -6,8 +6,10 @@ export  const Navbar = () => {
     const navigate=useNavigate()
   return (
    <>
+
    <Box shadow={"10px 10px 10px rgba(0,0,0,.1)"} padding={2} >
     <Container maxW="container.xl">
+      
      <Flex justifyContent="space-between" alignItems="center">
         <Text fontWeight="semibold" fontSize={30}>Sellit</Text>
         <Flex gap={5} fontWeight="semibold" fontSize={18} alignItems={"center"}>
