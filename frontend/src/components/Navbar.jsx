@@ -1,28 +1,51 @@
-import { Box, Button, Container, Flex, Link, Text } from '@chakra-ui/react'
-import React from 'react'
-import {useNavigate} from "react-router-dom"
+import {
+  Box,
+  Container,
+  Flex,
+  Text,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Button,
+  Avatar,
+  DarkMode,
+} from "@chakra-ui/react";
+import { BsChevronDown } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
+import { ThemeSwitch } from "./ThemeSwitch";
 
-export  const Navbar = () => {
-    const navigate=useNavigate()
+export const Navbar = () => {
+  const navigate = useNavigate();
   return (
-   <>
-
-   <Box shadow={"10px 10px 10px rgba(0,0,0,.1)"} padding={2} >
-    <Container maxW="container.xl">
-      
-     <Flex justifyContent="space-between" alignItems="center">
-        <Text fontWeight="semibold" fontSize={30}>Sellit</Text>
-        <Flex gap={5} fontWeight="semibold" fontSize={18} alignItems={"center"}>
-            <Link  _hover={{color:"green.700"}}  href='#'>Home</Link>
-            <Link   _hover={{color:"green.700"}}  href='#'>Admin</Link>
-            <Link  _hover={{color:"green.700"}}  href='#'>About</Link>
-            <Button onClick={()=>navigate("/login")} colorScheme='blue' size={"md"}>Login</Button>
-
+    <Box borderBottom="1px" borderColor="#dbdbdb">
+      <Container maxW="container.xl">
+        <Flex justifyContent="space-between" p={2} alignItems="center">
+          <Text>SellIt</Text>
+          <Flex>
+            <ThemeSwitch />
+            <Menu>
+              <MenuButton
+                bg={"white"}
+                _hover={{ bg: "white" }}
+                as={Button}
+                rightIcon={<BsChevronDown />}
+              >
+                <Avatar
+                  size="sm"
+                  name="Dan Abrahmov"
+                  src="https://bit.ly/dan-abramov"
+                />
+              </MenuButton>
+              <MenuList>
+                <MenuItem>Sell Item</MenuItem>
+                <MenuItem>Profile</MenuItem>
+                <MenuItem onClick={() => navigate("/")}>Logout</MenuItem>
+              </MenuList>
+            </Menu>
+          </Flex>
         </Flex>
-     </Flex>
-    </Container>
-   </Box>
-   </> 
-  )
-}
-
+      </Container>
+    </Box>
+  );
+};
