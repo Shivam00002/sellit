@@ -20,15 +20,18 @@ export const Navbar = () => {
   return (
     <Box borderBottom="1px" borderColor="#dbdbdb">
       <Container maxW="container.xl">
+
         <Flex justifyContent="space-between" p={2} alignItems="center">
           <Text>SellIt</Text>
           <Flex>
             <ThemeSwitch />
+
             <Menu>
               <MenuButton
                 bg={"white"}
                 _hover={{ bg: "white" }}
                 as={Button}
+                
                 rightIcon={<BsChevronDown />}
               >
                 <Avatar
