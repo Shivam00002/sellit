@@ -34,6 +34,7 @@ export const Navbar = () => {
                 
                 rightIcon={<BsChevronDown />}
               >
+                
                 <Avatar
                   size="sm"
                   name="Dan Abrahmov"
