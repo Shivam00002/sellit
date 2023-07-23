@@ -26,6 +26,8 @@ export const Navbar = () => {
           <Flex>
             <ThemeSwitch />
 
+
+
             <Menu>
               <MenuButton
                 bg={"white"}
