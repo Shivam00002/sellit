@@ -29,6 +29,7 @@ export const ProductCard = () => {
           </Text>
         </Stack>
       </CardBody>
+
       <Divider />
       <CardFooter>
         <ButtonGroup spacing="2">

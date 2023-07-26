@@ -10,7 +10,14 @@ function App() {
       <Route path='/' element={<Login/>}/>
       <Route path='/Home' element={<Home/>}/>
       <Route path='/admin' element={<Admin/>}/>
+      
+
+      
+
     </Routes>
+
+
+
 
   )
 }
