@@ -12,18 +12,25 @@ import {
   DarkMode,
 } from "@chakra-ui/react";
 import { BsChevronDown } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useFetcher, useMatch, useLocation } from "react-router-dom";
+
 import { ThemeSwitch } from "./ThemeSwitch";
 
 export const Navbar = () => {
   const navigate = useNavigate();
+let location=useLocation()
+const {pathname}=location
+
+
   return (
     <Box borderBottom="1px" borderColor="#dbdbdb">
       <Container maxW="container.xl">
         <Flex justifyContent="space-between" p={2} alignItems="center">
-          <Text>SellIt</Text>
-          <Flex>
+          <Text fontWeight="bold" size={24}>SellIt</Text>
+          <Flex alignItems="center" cursor="pointer" gap={3}>
             <ThemeSwitch />
+           <Text onClick={()=>navigate("/home")} fontWeight={pathname.split("/")[1]==="home" && "bold"}>Home</Text>
+           <Text onClick={()=>navigate("/admin")} fontWeight={pathname.split("/")[1]==="admin" && "bold"}>Admin</Text>
             <Menu>
               <MenuButton
                 bg={"white"}
