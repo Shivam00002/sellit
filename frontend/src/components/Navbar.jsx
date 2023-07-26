@@ -28,6 +28,7 @@ export const Navbar = () => {
 
 
 
+
             <Menu>
               <MenuButton
                 bg={"white"}
@@ -37,11 +38,13 @@ export const Navbar = () => {
                 rightIcon={<BsChevronDown />}
               >
                 
+
                 <Avatar
                   size="sm"
                   name="Dan Abrahmov"
                   src="https://bit.ly/dan-abramov"
                 />
+
               </MenuButton>
               <MenuList>
                 <MenuItem>Sell Item</MenuItem>
@@ -49,6 +52,7 @@ export const Navbar = () => {
                 <MenuItem onClick={() => navigate("/")}>Logout</MenuItem>
               </MenuList>
             </Menu>
+            
           </Flex>
         </Flex>
       </Container>
