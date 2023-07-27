@@ -28,10 +28,11 @@ export const ProductCard = () => {
             $450
           </Text>
         </Stack>
+        
       </CardBody>
 
       <Divider />
-      
+
       <CardFooter>
         <ButtonGroup spacing="2">
           <Button variant="solid" colorScheme="blue">
