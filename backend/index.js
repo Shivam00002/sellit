@@ -61,13 +61,13 @@ app.get("/signup", (req, res) => {
 app.get("/signup/:id", (req, res) => {
     let userID = req.params.id
     let sql = "SELECT * FROM signup WHERE email =?"
-    db.query(sql, userID , (error , result)=>{
+    db.query(sql, userID, (error, result) => {
         if (error) {
             return res.status("error is comeing")
         } else {
             return res.json(result)
         }
-    } )
+    })
 })
 
 
