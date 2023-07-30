@@ -12,11 +12,11 @@ import {
   Link,
   Text,
 } from "@chakra-ui/react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-function Login() {
+function Signup() {
   const navigate = useNavigate();
 
   const {
@@ -27,26 +27,19 @@ function Login() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("ramm");
-    PostEmialPass(data);
+    console.log("ramm")
+    if (data.Password === data.ConfirmPass) {
+      PostEmialPass(data);
+      navigate("/")
+    } else {
+      alert("Password is incorrect");
+    }
   };
 
   const PostEmialPass = async (data) => {
     try {
-      let res = await axios.get(`http://localhost:8000/signup/${data.Email}`);
-      console.log(res.data);
-      let password = res.data[0];
-
-      if (res.data.length >= 1) {
-        if (password.password == data.Password) {
-          alert("Login Success!");
-          navigate("/home")
-        } else {
-          alert("Password not found");
-        }
-      } else {
-        alert("Email not found");
-      }
+      let res = await axios.post("http://localhost:8000/signup", data);
+      console.log(res);
     } catch (err) {
       console.log(err);
     }
@@ -56,7 +49,7 @@ function Login() {
     <Box width={"100vw"} height={"100vh"} display="grid" placeContent="center">
       <Card maxW={"400px"} width="400px">
         <CardHeader>
-          <Heading size={"md"}>Login</Heading>
+          <Heading size={"md"}>Signup</Heading>
         </CardHeader>
         <CardBody>
           <FormControl>
@@ -64,7 +57,8 @@ function Login() {
             <Input type="email" {...register("Email")} />
             <FormLabel mt={2}>Password</FormLabel>
             <Input type="password" {...register("Password")} />
-
+            <FormLabel mt={2}> Confirm Password</FormLabel>
+            <Input type="password" {...register("ConfirmPass")} />
             <Button
               onClick={handleSubmit(onSubmit)}
               w={"100%"}
@@ -72,16 +66,18 @@ function Login() {
               colorScheme="teal"
               type="submit"
             >
-              Login
+              Sign up
             </Button>
           </FormControl>
         </CardBody>
         <CardFooter>
-          <Text onClick={() => navigate("/")}>Already have an Account</Text>
+          <Text onClick={() => navigate("/signup")}>
+            Create new Account here
+          </Text>
         </CardFooter>
       </Card>
     </Box>
   );
 }
 
-export default Login;
+export default Signup;

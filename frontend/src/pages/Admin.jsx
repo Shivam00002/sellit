@@ -14,6 +14,7 @@ import { useForm } from "react-hook-form";
 
 
 function Admin() {
+
   const {
     register,
     handleSubmit,
@@ -40,17 +41,17 @@ function Admin() {
           <FormLabel>Desc</FormLabel>
           <Textarea
             placeholder="Product Description..."
-            {...register("Product decription")}
+            {...register("Productdec")}
             mb={5}
           />
           <FormLabel>Price</FormLabel>
           <Input mb={5} {...register("Price")} />
           <FormLabel>Title</FormLabel>
-          <Input type="text" {...register("P")} mb={5} />
+          <Input type="text" {...register("Price")} mb={5} />
           <FormLabel>Quantity</FormLabel>
-          <Input type="number" {...register("Product Quetity")} mb={5} />
+          <Input type="number" {...register("Quetity")} mb={5} />
           <FormLabel>Product Image</FormLabel>
-          <Input type="text" {...register("Product Image")} mb={5} />
+          <Input type="text" {...register("Image")} mb={5} />
           <Checkbox defaultChecked>Cash on delivery</Checkbox>
           <Button
             method="post"
