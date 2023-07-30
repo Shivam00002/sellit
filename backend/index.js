@@ -84,6 +84,7 @@ app.post("/products", (req, res) => {
 })
 
 
+
 app.get("/products", (req, res) => {
     let sql = "SELECT * FROM produtsdata"
     db.query(sql, (err, result) => {
