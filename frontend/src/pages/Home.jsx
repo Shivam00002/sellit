@@ -6,9 +6,8 @@ import Herosection from "./Mainpage/Herosection";
 function Home() {
   return (
     <>
-
       <Navbar />
-      <Herosection/>
+      <Herosection />
       <Container maxW={"container.xl"} mt={2}>
         <Grid templateColumns="repeat(3, 1fr)" gap={3}>
           {[...new Array(20)].map((item, index) => (
@@ -16,8 +15,6 @@ function Home() {
               <ProductCard />
             </GridItem>
           ))}
-          
-
         </Grid>
       </Container>
     </>

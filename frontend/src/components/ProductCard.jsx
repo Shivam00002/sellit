@@ -10,9 +10,34 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import axios from "axios";
 import React from "react";
+import { useEffect } from "react";
+
+
+
+
+
 
 export const ProductCard = () => {
+
+
+  const GetData = async () => {
+    try {
+      let res = await axios.get("http://localhost:8000/products");
+      console.log("item aaya bhai",res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+
+  useEffect(()=>{
+   GetData()
+  },[])
+
+
+
   return (
     <Card maxW="sm">
       <CardBody>

@@ -96,6 +96,32 @@ app.get("/products", (req, res) => {
     })
 })
 
+
+
+app.delete("/products/:id", (req, res) => {
+    const productId = req.params.id;
+    const sql = "DELETE FROM `produtsdata` WHERE `id` = ?";
+
+    db.query(sql, [productId], (err, result) => {
+        if (err) {
+            console.log(err);
+            return res.status(500).json({ error: "An error occurred while deleting the product." });
+        } else {
+            if (result.affectedRows === 0) {
+                return res.status(404).json({ error: "Product not found." });
+            } else {
+                return res.status(200).json({ message: "Product deleted successfully!" });
+            }
+        }
+    });
+});
+
+
+
+
+
+
+
 app.listen(8000, () => {
     console.log("Server is running on port 8000");
 });

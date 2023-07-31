@@ -10,6 +10,8 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
+import { BsDatabaseDash } from "react-icons/bs";
+import axios from "axios";
 
 
 
@@ -23,8 +25,22 @@ function Admin() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    PostItem(data)
+
+
   };
+
+
+  const PostItem = async (data) => {
+    try {
+      let res = await axios.post("http://localhost:8000/products", data);
+      console.log("ab hua",res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+
 
   return (
     <>
