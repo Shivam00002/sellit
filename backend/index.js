@@ -65,6 +65,7 @@ app.get("/signup/:id", (req, res) => {
             return res.json(result);
         }
     });
+
 });
 
 
@@ -75,6 +76,7 @@ app.post("/products", (req, res) => {
 
     db.query(sql, sqlData, (err, result) => {
         if (err) {
+            
             console.log(err)
         } else {
             return res.send(result)
