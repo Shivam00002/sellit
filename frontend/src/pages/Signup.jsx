@@ -27,10 +27,10 @@ function Signup() {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log("ramm")
+    console.log("ramm");
     if (data.Password === data.ConfirmPass) {
       PostEmialPass(data);
-      navigate("/")
+      navigate("/");
     } else {
       alert("Password is incorrect");
     }

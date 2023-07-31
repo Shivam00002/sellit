@@ -6,7 +6,6 @@ import Herosection from "./Mainpage/Herosection";
 function Home() {
   return (
     <>
-      <Navbar />
       <Herosection />
       <Container maxW={"container.xl"} mt={2}>
         <Grid templateColumns="repeat(3, 1fr)" gap={3}>

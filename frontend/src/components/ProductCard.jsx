@@ -14,29 +14,19 @@ import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 
-
-
-
-
-
 export const ProductCard = () => {
-
-
   const GetData = async () => {
     try {
       let res = await axios.get("http://localhost:8000/products");
-      console.log("item aaya bhai",res.data);
+      console.log("item aaya bhai", res.data);
     } catch (err) {
       console.log(err);
     }
   };
 
-
-  useEffect(()=>{
-   GetData()
-  },[])
-
-
+  useEffect(() => {
+    GetData();
+  }, []);
 
   return (
     <Card maxW="sm">
@@ -50,10 +40,9 @@ export const ProductCard = () => {
           <Heading size="md">Living room Sofa</Heading>
 
           <Text color="blue.600" fontSize="2xl">
-            $450
+            Rs.450
           </Text>
         </Stack>
-        
       </CardBody>
 
       <Divider />

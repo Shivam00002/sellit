@@ -40,7 +40,7 @@ function Login() {
       if (res.data.length >= 1) {
         if (password.password == data.Password) {
           alert("Login Success!");
-          navigate("/home")
+          navigate("/home");
         } else {
           alert("Password not found");
         }
@@ -77,7 +77,9 @@ function Login() {
           </FormControl>
         </CardBody>
         <CardFooter>
-          <Text onClick={() => navigate("/signup")}>You don't have an Account  <p className="text-[blue]">click here </p>   </Text>
+          <Text onClick={() => navigate("/signup")}>
+            You don't have an Account <p className="text-[blue]">click here </p>{" "}
+          </Text>
         </CardFooter>
       </Card>
     </Box>

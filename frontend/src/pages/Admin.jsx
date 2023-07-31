@@ -13,10 +13,7 @@ import { useForm } from "react-hook-form";
 import { BsDatabaseDash } from "react-icons/bs";
 import axios from "axios";
 
-
-
 function Admin() {
-
   const {
     register,
     handleSubmit,
@@ -25,26 +22,20 @@ function Admin() {
   } = useForm();
 
   const onSubmit = (data) => {
-    PostItem(data)
-
-
+    PostItem(data);
   };
-
 
   const PostItem = async (data) => {
     try {
       let res = await axios.post("http://localhost:8000/products", data);
-      console.log("ab hua",res.data);
+      console.log("ab hua", res.data);
     } catch (err) {
       console.log(err);
     }
   };
 
-
-
   return (
     <>
-      <Navbar />
       <Container
         maxW={"container.xl"}
         display={"grid"}
@@ -76,8 +67,6 @@ function Admin() {
             mt={2}
             width={"full"}
           >
-
-            
             Submit
           </Button>
         </FormControl>

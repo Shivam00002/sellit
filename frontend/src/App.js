@@ -4,19 +4,21 @@ import {Routes,Route} from "react-router-dom"
 import Home from './pages/Home'
 import Admin from './pages/Admin'
 import Signup from './pages/Signup'
+import Mycart from './pages/Mycart'
+import { Navbar } from './components/Navbar'
 
 function App() {
   return (
+    <>
+    <Navbar/>
     <Routes>
       <Route path='/' element={<Login/>}/>
       <Route path='/Home' element={<Home/>}/>
       <Route path='/admin' element={<Admin/>}/>
       <Route path='/signup' element={<Signup/>}/>
-
-      
-
+      <Route path='/mycart' element={<Mycart/>}/>
     </Routes>
-
+    </>
 
 
 
