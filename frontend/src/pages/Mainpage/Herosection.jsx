@@ -28,7 +28,7 @@ const Herosection = () => {
                 fill
                 alt="small-img"
                 src="https://cdn.dribbble.com/users/707385/screenshots/4521894/11_9_2_still.gif?resize=400x0"
-                className="object-cover"
+                className="h-full w-full"
               />
             </div>
             <div className="   w-full h-full relative ">
@@ -40,13 +40,13 @@ const Herosection = () => {
               />
             </div>
           </div>
-          <div className="flex  w-full  border border-red-700  h-[50%] ">
-            <div className="  w-full h-full border border-green-600   relative ">
+          <div className="flex  w-full    h-[50%] ">
+            <div className="  w-full h-full    relative ">
               <img
                 fill
                 alt="small-img"
                 src="https://images.doclify.net/bayswater-web/d/8ec9a6cc-809c-4207-9e74-f8043f43bded.png?enlarge=0&format=webp&w=600"
-                className="object-cover rounded-full hover:rounded-none  "
+                className="h-full w-full  rounded-full hover:rounded-none  "
               />
             </div>
             <div className="object-cover  w-full h-full relative ">
@@ -54,7 +54,7 @@ const Herosection = () => {
                 fill
                 alt="small-img"
                 src="https://studio.uxpincdn.com/studio/wp-content/uploads/2016/06/12-Timeless-UI-Layouts.png.webp"
-                className="object-cover"
+               className="h-full"
               />
             </div>
           </div>
@@ -62,12 +62,12 @@ const Herosection = () => {
       </div>
       <AutoScrollCards />
 
-      <div className="w-full h-fit py-20  border border-red-600  bg-[#f8f7f2]">
-        <div className="md:flex w-[90%]  md:w-[80%] h-[600px] md:px-2 py-2 md:mt-10 mx-auto   items-center gap-4 ">
-          <div className="imgdiv  md:w-[50%] w-full border border-green-400   md:h-full h-[370px]  relative ">
+      <div className="w-full h-fit py-20    bg-[#f8f7f2]">
+        <div className="md:flex w-[90%]  md:w-[80%] h-[600px] md:px-2 py-2 md:mt-10 mx-auto   items-center gap-10 ">
+          <div className="imgdiv  md:w-[50%] w-full   md:h-full h-[370px]  relative ">
             <img
             fill
-              src="https://imgs.doclify.net/bayswater-web/d/8e34f447-3ff0-4f13-a7a2-c516501bdbc2.png"
+              src="https://images.doclify.net/bayswater-web/d/8e34f447-3ff0-4f13-a7a2-c516501bdbc2.png"
               className="object-contain"
               
             />
