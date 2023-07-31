@@ -77,7 +77,7 @@ function Login() {
           </FormControl>
         </CardBody>
         <CardFooter>
-          <Text onClick={() => navigate("/")}>Already have an Account</Text>
+          <Text onClick={() => navigate("/signup")}>You don't have an Account  <p className="text-[blue]">click here </p>   </Text>
         </CardFooter>
       </Card>
     </Box>
