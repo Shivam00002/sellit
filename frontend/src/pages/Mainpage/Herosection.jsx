@@ -72,7 +72,7 @@ const Herosection = () => {
               
             />
           </div>
-          <div className="txtdiv md:w-[50%] w-full  h-full   ">
+          <div className="txtdiv md:w-[50%] w-full md:mt-0 mt-10  h-full   ">
             <h1 className="md:text-[66px] mt-0 md:mt-16 md:py-0   py-6 text-[40px] font-semibold text-[#080860e2] leading-[40px]  md:leading-[80px] ">
               Create the life you want to live.
             </h1>

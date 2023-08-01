@@ -75,7 +75,7 @@ app.post("/products", (req, res) => {
   let sqlData = [
     req.body.Title,
     req.body.Price,
-    req.body.Quetity,
+    req.body.Quantity, // Corrected field name
     req.body.Productdec,
   ];
 
