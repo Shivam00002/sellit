@@ -30,14 +30,18 @@ export const Navbar = () => {
     <Box borderBottom="1px" borderColor="#dbdbdb">
       <Container maxW="container.xl">
         <Flex justifyContent="space-between" p={2} alignItems="center">
+          
           <Text cursor="pointer" size={34}
            onClick={() => navigate("/home")}
            fontWeight={pathname.split("/")[1] === "home" && "bold"}
           >
             SellIt
           </Text>
+  
           <Flex alignItems="center" cursor="pointer" gap={3}>
+   <div className="md:block hidden">
             <ThemeSwitch />
+            </div>
             <Text
               onClick={() => navigate("/home")}
               fontWeight={pathname.split("/")[1] === "home" && "bold"}
