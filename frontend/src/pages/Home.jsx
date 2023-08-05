@@ -18,6 +18,8 @@ function Home() {
   }
   return (
     <>
+
+    
       <Herosection />
       <Container maxW={"container.xl"} mt={2}>
         <Grid templateColumns={getResponsive()} gap={3}>
