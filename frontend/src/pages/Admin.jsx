@@ -17,11 +17,11 @@ function Admin() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
+    console.log("data", data);
     PostItem(data);
   };
 
@@ -45,23 +45,20 @@ function Admin() {
         <FormControl minW={600}>
           <FormLabel>Title</FormLabel>
           <Input type="text" {...register("Title")} mb={5} />
-          <FormLabel>Desc</FormLabel>
+          <FormLabel>Product Description</FormLabel>
           <Textarea
             placeholder="Product Description..."
-            {...register("Productdec")}
+            {...register("ProductDesc")}
             mb={5}
           />
           <FormLabel>Price</FormLabel>
           <Input mb={5} {...register("Price")} />
-          <FormLabel>Title</FormLabel>
-          <Input type="text" {...register("Price")} mb={5} />
           <FormLabel>Quantity</FormLabel>
-          <Input type="number" {...register("Quetity")} mb={5} />
+          <Input type="number" {...register("Quantity")} mb={5} />
           <FormLabel>Product Image</FormLabel>
           <Input type="text" {...register("Image")} mb={5} />
-          <Checkbox defaultChecked>Cash on delivery</Checkbox>
+          <Checkbox defaultChecked={false}>Cash on delivery</Checkbox>
           <Button
-            method="post"
             onClick={handleSubmit(onSubmit)}
             colorScheme="blue"
             mt={2}

@@ -13,7 +13,6 @@ app.use(express.json());
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  port: "3306",
   password: "",
   database: "sellit",
 });
@@ -76,12 +75,13 @@ app.post("/products", (req, res) => {
   let sqlData = [
     req.body.Title,
     req.body.Price,
-    req.body.Quantity, // Corrected field name
+    req.body.Quantity, 
     req.body.Productdec,
   ];
 
-  let sql =
-    "INSERT INTO `produtsdata`( `title`, `price`, `quantity`, `description`) VALUES ( ? , ? , ? ,? )";
+
+  let sql =  "INSERT INTO `produtsdata`( `title`, `price`, `quantity`, `description`) VALUES ( ? , ? , ? ,? )";
+   
 
   db.query(sql, sqlData, (err, result) => {
     if (err) {
@@ -93,6 +93,7 @@ app.post("/products", (req, res) => {
 });
 
 app.get("/products", (req, res) => {
+
   let sql = "SELECT * FROM produtsdata";
   db.query(sql, (err, result) => {
     if (err) {
