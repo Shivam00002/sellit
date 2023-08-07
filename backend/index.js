@@ -105,6 +105,74 @@ app.get("/products", (req, res) => {
   });
 });
 
+
+
+app.post("/cart" ,(req ,res)=>{
+  let sqlData = [
+
+    req.body.Title,
+    req.body.Price,
+    req.body.Quantity, 
+    req.body.ProductDesc,
+    req.body.Image
+
+  ];
+  let sql =  "INSERT INTO `cart`( `title`, `price`, `quantity`, `decription` , `image`) VALUES ( ? , ? , ? ,? , ? )";
+
+  db.query(sql, sqlData, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+       res.send(result);
+    }
+  });
+
+})
+
+
+app.get("/cart", (req, res) => {
+
+  let sql = "SELECT * FROM cart";
+  db.query(sql, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      return res.send(result);
+    }
+  });
+});
+
+
+
+//cart item delete
+app.delete("/cart/:id", (req, res) => {
+  const productId = req.params.id;
+  const sql = "DELETE FROM `cart` WHERE `id` = ?";
+
+  db.query(sql, [productId], (err, result) => {
+    if (err) {
+      console.log(err);
+      return res
+        .status(500)
+        .json({ error: "An error occurred while deleting the product." });
+    } else {
+      if (result.affectedRows === 0) {
+        return res.status(404).json({ error: "Product not found." });
+      } else {
+        return res
+          .status(200)
+          .json({ message: "Cart Item deleted successfully!" });
+      }
+    }
+  });
+});
+
+
+
+
+
+
+//product delete
 app.delete("/products/:id", (req, res) => {
   const productId = req.params.id;
   const sql = "DELETE FROM `produtsdata` WHERE `id` = ?";
