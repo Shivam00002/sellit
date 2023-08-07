@@ -76,11 +76,12 @@ app.post("/products", (req, res) => {
     req.body.Title,
     req.body.Price,
     req.body.Quantity, 
-    req.body.Productdec,
+    req.body.ProductDesc,
+    req.body.Image
   ];
 
 
-  let sql =  "INSERT INTO `produtsdata`( `title`, `price`, `quantity`, `description`) VALUES ( ? , ? , ? ,? )";
+  let sql =  "INSERT INTO `produtsdata`( `title`, `price`, `quantity`, `description` , `cod`) VALUES ( ? , ? , ? ,? , ? )";
    
 
   db.query(sql, sqlData, (err, result) => {
