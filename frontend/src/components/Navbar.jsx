@@ -20,11 +20,15 @@ import {
 } from "react-router-dom";
 
 import { ThemeSwitch } from "./ThemeSwitch";
+import { useContext } from "react";
+import { CartContext } from "../ContextProvider";
 
 export const Navbar = () => {
+  const {cartItem}=useContext(CartContext)
   const navigate = useNavigate();
   let location = useLocation();
   const { pathname } = location;
+  console.log(cartItem?.length)
 
   return (
     <Box borderBottom="1px" borderColor="#dbdbdb">
@@ -48,17 +52,12 @@ export const Navbar = () => {
             >
               Home
             </Text>
-            <Text
-              onClick={() => navigate("/admin")}
-              fontWeight={pathname.split("/")[1] === "admin" && "bold"}
-            >
-              Admin
-            </Text>
+           
             <Text
               onClick={() => navigate("/mycart")}
               fontWeight={pathname.split("/")[1] === "mycart" && "bold"}
             >
-              Cart
+              Cart   <span className="font-semibold text-red-600">  {cartItem?.length}</span>
             </Text>
 
             <Menu>
@@ -75,7 +74,7 @@ export const Navbar = () => {
                 />
               </MenuButton>
               <MenuList>
-                <MenuItem>Sell Item</MenuItem>
+                <MenuItem   onClick={() => navigate("/admin")} >Sell Item</MenuItem>
                 <MenuItem>Profile</MenuItem>
                 <MenuItem onClick={() => navigate("/")}>Logout</MenuItem>
               </MenuList>

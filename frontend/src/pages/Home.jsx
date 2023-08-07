@@ -4,6 +4,7 @@ import { ProductCard } from "../components/ProductCard";
 import Herosection from "./Mainpage/Herosection";
 import { useState ,useEffect} from "react";
 import axios from "axios";
+import {Toaster} from "react-hot-toast"
 
 
 function Home() {
@@ -48,6 +49,10 @@ function Home() {
           ))}
         </Grid>
       </Container>
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
     </>
   );
 }
