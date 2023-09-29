@@ -43,7 +43,7 @@ export const Navbar = () => {
           </Text>
   
           <Flex alignItems="center" cursor="pointer" gap={3}>
-   <div className="md:block hidden">
+   <div  className="md:block hidden">
             <ThemeSwitch />
             </div>
             <Text
@@ -82,6 +82,7 @@ export const Navbar = () => {
           </Flex>
         </Flex>
       </Container>
+    
     </Box>
   );
 };
