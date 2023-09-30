@@ -11,8 +11,6 @@ import { CartContextProvider } from './ContextProvider'
 function App() {
   return (
     <>
-
-    
    <CartContextProvider>
     <Navbar/>
    <Routes>
