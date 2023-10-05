@@ -35,6 +35,7 @@ export const Navbar = () => {
       <Container maxW="container.xl">
         <Flex justifyContent="space-between" p={2} alignItems="center">
           
+
           <Text cursor="pointer" size={34}
            onClick={() => navigate("/home")}
            fontWeight={pathname.split("/")[1] === "home" && "bold"}
