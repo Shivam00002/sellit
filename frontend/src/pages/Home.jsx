@@ -13,9 +13,6 @@ function Home() {
   const[products,setProducts]=useState([])
 
 
-
-
-
   const GetData = async () => {
     try {
       let res = await axios.get("http://localhost:8000/products");
