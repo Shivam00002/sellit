@@ -23,8 +23,6 @@ import { ThemeSwitch } from "./ThemeSwitch";
 import { useContext } from "react";
 import { CartContext } from "../ContextProvider";
 
-
-
 export const Navbar = () => {
   const {cartItem}=useContext(CartContext)
   const navigate = useNavigate();
