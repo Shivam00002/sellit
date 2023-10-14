@@ -11,12 +11,6 @@ function Home() {
   const [isLargerThan600] = useMediaQuery('(min-width: 600px)')
   const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
   const[products,setProducts]=useState([])
-
-
-
-
-
-
   const GetData = async () => {
     try {
       let res = await axios.get("http://localhost:8000/products");
