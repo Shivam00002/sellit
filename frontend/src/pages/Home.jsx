@@ -7,6 +7,8 @@ import axios from "axios";
 import {Toaster} from "react-hot-toast"
 
 
+
+
 function Home() {
   const [isLargerThan600] = useMediaQuery('(min-width: 600px)')
   const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
