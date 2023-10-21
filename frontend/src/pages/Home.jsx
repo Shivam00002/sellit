@@ -19,9 +19,6 @@ function Home() {
     }
   };
 
-
-  
-  
   useEffect(() => {
     GetData();
   }, []);
