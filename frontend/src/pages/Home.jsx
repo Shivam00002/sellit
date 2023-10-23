@@ -19,6 +19,7 @@ function Home() {
     }
   };
 
+
   useEffect(() => {
     GetData();
   }, []);
