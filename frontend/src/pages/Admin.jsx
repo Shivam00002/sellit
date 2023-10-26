@@ -26,6 +26,7 @@ function Admin() {
   };
 
 
+
   const PostItem = async (data) => {
     try {
       let res = await axios.post("http://localhost:8000/products", data);
