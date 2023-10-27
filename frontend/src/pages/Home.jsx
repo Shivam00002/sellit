@@ -20,6 +20,7 @@ function Home() {
   };
 
 
+
   useEffect(() => {
     GetData();
   }, []);
