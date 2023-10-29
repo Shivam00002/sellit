@@ -7,11 +7,14 @@ import axios from "axios";
 import {Toaster} from "react-hot-toast"
 
 function Home() {
-  const [isLargerThan600] = useMediaQuery('(min-width: 600px)')
+  const [isLargerThan600] =
+ useMediaQuery('(min-width: 600px)')
   const [isLargerThan800] = useMediaQuery('(min-width: 800px)')
+
   const[products,setProducts]=useState([])
   const GetData = async () => {
     try {
+
       let res = await axios.get("http://localhost:8000/products");
       setProducts(res.data);
     } catch (err) {
@@ -27,6 +30,7 @@ function Home() {
 
   const getResponsive=()=>{
     if(isLargerThan600){
+
       return "repeat(3,1fr)"
     }else if(isLargerThan800){
       return "repeat(2,1fr)"
