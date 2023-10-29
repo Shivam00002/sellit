@@ -26,7 +26,6 @@ function Signup() {
     formState: { errors },
   } = useForm();
 
-  
   const onSubmit = (data) => {
     console.log("ramm");
     if (data.Password === data.ConfirmPass) {
