@@ -31,12 +31,12 @@ function Login() {
     PostEmialPass(data);
   };
 
-
   const PostEmialPass = async (data) => {
     try {
       let res = await axios.get(`http://localhost:8000/signup/${data.Email}`);
       console.log(res.data);
       let password = res.data[0];
+
 
       if (res.data.length >= 1) {
         if (password.password == data.Password) {
