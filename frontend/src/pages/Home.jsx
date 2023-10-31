@@ -26,6 +26,7 @@ function Home() {
     GetData();
   }, []);
 
+
   const getResponsive=()=>{
     if(isLargerThan600){
 
