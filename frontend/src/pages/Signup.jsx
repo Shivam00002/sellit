@@ -36,8 +36,6 @@ function Signup() {
     }
   };
 
-
-
   const PostEmialPass = async (data) => {
     try {
       let res = await axios.post("http://localhost:8000/signup", data);
