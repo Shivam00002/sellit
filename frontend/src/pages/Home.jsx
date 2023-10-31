@@ -27,6 +27,7 @@ function Home() {
   }, []);
 
 
+
   const getResponsive=()=>{
     if(isLargerThan600){
 
