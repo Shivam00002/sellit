@@ -22,8 +22,6 @@ function Home() {
     }
   };
 
-
-
   useEffect(() => {
     GetData();
   }, []);
