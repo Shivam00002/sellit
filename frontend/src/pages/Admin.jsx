@@ -25,8 +25,6 @@ function Admin() {
     PostItem(data);
   };
 
-
-
   const PostItem = async (data) => {
     try {
       let res = await axios.post("http://localhost:8000/products", data);
@@ -35,6 +33,7 @@ function Admin() {
       console.log(err);
     }
   };
+
 
   return (
     <>
