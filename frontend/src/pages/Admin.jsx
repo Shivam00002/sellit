@@ -13,6 +13,7 @@ import { useForm } from "react-hook-form";
 import { BsDatabaseDash } from "react-icons/bs";
 import axios from "axios";
 
+
 function Admin() {
   const {
     register,
@@ -24,6 +25,7 @@ function Admin() {
     console.log("data", data);
     PostItem(data);
   };
+
 
   const PostItem = async (data) => {
     try {
