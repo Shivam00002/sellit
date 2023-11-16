@@ -10,6 +10,7 @@ export const ThemeSwitch = () => {
       </FormLabel>
       <Switch
         id="email-alerts"
+
         colorScheme="green"
         isChecked={colorMode === "dark"}
         onChange={toggleColorMode}
