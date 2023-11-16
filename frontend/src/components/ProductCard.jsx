@@ -24,6 +24,7 @@ const handleAddToCart=()=>{
     return toast.error("already added to cart")
   }else{
 
+
     setCartItem([...cartItem,item])
   toast.success("added to cart");
   }
