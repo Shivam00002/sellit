@@ -11,6 +11,7 @@ export const ThemeSwitch = () => {
       <Switch
         id="email-alerts"
 
+
         colorScheme="green"
         isChecked={colorMode === "dark"}
         onChange={toggleColorMode}
