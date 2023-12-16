@@ -43,6 +43,7 @@ app.post("/signup", (req, res) => {
   });
 });
 
+
 app.get("/signup", (req, res) => {
   const sql = "SELECT * FROM signup";
   db.query(sql, (error, result) => {
