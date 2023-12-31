@@ -30,8 +30,6 @@ export const Navbar = () => {
   const { pathname } = location;
   console.log(cartItem?.length)
 
-
-
   return (
     <Box borderBottom="1px" borderColor="#dbdbdb">
       <Container maxW="container.xl">
