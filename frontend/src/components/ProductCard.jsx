@@ -49,8 +49,6 @@ console.log(item);
       </CardBody>
 
       <Divider />
-
-
       <CardFooter>
         <ButtonGroup spacing="2">
           <Button variant="solid" colorScheme="blue">
