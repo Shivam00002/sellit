@@ -28,6 +28,7 @@ const handleAddToCart=()=>{
   toast.success("added to cart");
   }
 }
+
 console.log(item);
   return (
     <Card w="full">
