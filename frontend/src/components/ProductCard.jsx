@@ -29,6 +29,7 @@ const handleAddToCart=()=>{
   }
 }
 
+
 console.log(item);
   return (
     <Card w="full">
