@@ -16,9 +16,6 @@ const db = mysql.createConnection({
   password: "",
   database: "sellit",
 });
-
-
-
 db.connect(function (error) {
   if (error) {
     throw error;
