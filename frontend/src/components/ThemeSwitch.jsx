@@ -8,6 +8,7 @@ export const ThemeSwitch = () => {
       <FormLabel htmlFor="email-alerts" mb="0">
         Dark Mode
       </FormLabel>
+
       <Switch
         id="email-alerts"
         colorScheme="green"
