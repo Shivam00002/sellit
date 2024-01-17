@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { CartContext } from '../ContextProvider';
 
+
 const Mycart = () => {
   const { cartItem, setCartItem } = useContext(CartContext);
 
