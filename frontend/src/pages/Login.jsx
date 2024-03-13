@@ -31,7 +31,6 @@ function Login() {
     PostEmialPass(data);
   };
 
-
   const PostEmialPass = async (data) => {
     try {
       let res = await axios.get(`http://localhost:8000/signup/${data.Email}`);
