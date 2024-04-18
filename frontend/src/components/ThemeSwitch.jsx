@@ -6,6 +6,7 @@ export const ThemeSwitch = () => {
   return (
     <FormControl display="flex" alignItems="center">
       <FormLabel htmlFor="email-alerts" mb="0">
+
         Dark Mode
       </FormLabel>
       <Switch
