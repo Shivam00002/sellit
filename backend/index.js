@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to our Website");
 });
 
+
 app.post("/signup", (req, res) => {
   const sqlData = [req.body.Email, req.body.Password];
   const sql = "INSERT INTO `signup` (`email`, `password`) VALUES (?, ?)";
